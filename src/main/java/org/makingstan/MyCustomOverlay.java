@@ -54,7 +54,7 @@ public class MyCustomOverlay extends Overlay
         // Only render text if the "Show Text" checkbox is ticked
         if (config.showText())
         {
-            graphics.setColor(config.colorText());
+            graphics.setColor(new Color(config.colorText().getRed(), config.colorText().getGreen(), config.colorText().getBlue(), config.textAlpha()));
             graphics.setFont(new Font(graphics.getFont().getFontName(), Font.PLAIN, config.size()));
             graphics.drawString(config.textmsg(), x, y);
         }

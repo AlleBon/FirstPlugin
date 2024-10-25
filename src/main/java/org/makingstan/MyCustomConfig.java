@@ -48,4 +48,13 @@ public interface MyCustomConfig extends Config
 	{
 		return Color.RED;
 	}
+	@ConfigItem(
+			keyName = "textAlpha",
+			name = "Text Alpha",
+			description = ""
+	)
+	default int textAlpha()
+	{
+		return 100;
+	}
 }
